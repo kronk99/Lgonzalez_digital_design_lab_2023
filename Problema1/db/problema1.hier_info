@@ -1,0 +1,23 @@
+|decodificador
+a => v.IN0
+a => v.IN0
+a => w.IN0
+a => x.IN0
+a => y.IN0
+b => v.IN1
+b => x.IN1
+b => x.IN0
+b => w.IN1
+c => v.IN1
+c => x.IN1
+c => y.IN1
+c => w.IN1
+c => y.IN1
+d => z.DATAIN
+v << v.DB_MAX_OUTPUT_PORT_TYPE
+w << w.DB_MAX_OUTPUT_PORT_TYPE
+x << x.DB_MAX_OUTPUT_PORT_TYPE
+y << y.DB_MAX_OUTPUT_PORT_TYPE
+z << d.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY decodificador
+set_global_assignment -name TOP_LEVEL_ENTITY Interfaz
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:52:58  FEBRUARY 10, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.0 Lite Edition"
@@ -60,16 +60,19 @@ set_global_assignment -name EDA_TEST_BENCH_NAME decodificador_tb -section_id eda
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id decodificador_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME decodificador_tb -section_id decodificador_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE decodificador_tb.sv -section_id decodificador_tb
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_AB12 -to a
 set_location_assignment PIN_AC12 -to b
 set_location_assignment PIN_AF9 -to c
 set_location_assignment PIN_AF10 -to d
-set_location_assignment PIN_AE28 -to v
-set_location_assignment PIN_AH30 -to w
-set_location_assignment PIN_AD29 -to x
-set_location_assignment PIN_AD25 -to y
-set_location_assignment PIN_Y24 -to z
+set_global_assignment -name VERILOG_FILE segmentos.v
+set_global_assignment -name SYSTEMVERILOG_FILE Interfaz.sv
+set_global_assignment -name SYSTEMVERILOG_FILE interfaz_tb.sv
+set_location_assignment PIN_AE28 -to salida[0]
+set_location_assignment PIN_AH30 -to salida[1]
+set_location_assignment PIN_AD29 -to salida[2]
+set_location_assignment PIN_AD25 -to salida[3]
+set_location_assignment PIN_Y24 -to salida[4]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
