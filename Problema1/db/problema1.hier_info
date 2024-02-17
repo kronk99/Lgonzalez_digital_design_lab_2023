@@ -1,0 +1,52 @@
+|Interfaz
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+salida[0] << Segmentos:miSegmento.seg
+salida[1] << Segmentos:miSegmento.seg
+salida[2] << Segmentos:miSegmento.seg
+salida[3] << Segmentos:miSegmento.seg
+salida[4] << Segmentos:miSegmento.seg
+salida[5] << Segmentos:miSegmento.seg
+salida[6] << Segmentos:miSegmento.seg
+
+
+|Interfaz|decodificador:miDecodificador
+a => v.IN0
+a => v.IN0
+a => w.IN0
+a => x.IN0
+a => y.IN0
+b => v.IN1
+b => x.IN1
+b => x.IN0
+b => w.IN1
+c => v.IN1
+c => x.IN1
+c => y.IN1
+c => w.IN1
+c => y.IN1
+d => z.DATAIN
+v <= v.DB_MAX_OUTPUT_PORT_TYPE
+w <= w.DB_MAX_OUTPUT_PORT_TYPE
+x <= x.DB_MAX_OUTPUT_PORT_TYPE
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+z <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Interfaz|Segmentos:miSegmento
+bcd[0] => Decoder0.IN4
+bcd[1] => Decoder0.IN3
+bcd[2] => Decoder0.IN2
+bcd[3] => Decoder0.IN1
+bcd[4] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
