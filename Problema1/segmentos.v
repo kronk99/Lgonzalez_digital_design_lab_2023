@@ -1,5 +1,5 @@
 module Segmentos(input logic [4:0] bcd, output logic [6:0] seg);
-  always_comb begin
+  always @(bcd) begin 
     case (bcd)
       5'b00000: seg = 7'b0000001;
       5'b00001: seg = 7'b1001111;

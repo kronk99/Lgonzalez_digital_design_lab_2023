@@ -2,7 +2,6 @@ module decodificador_tb();
 	logic a,b,c,d,v,w,x,y,z;
 	decodificador decodificacion(a,b,c,d,v,w,x,y,z);
 	initial begin 
-	a = 5
 	a=0;
 	b=0;
 	c=0;

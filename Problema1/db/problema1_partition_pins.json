@@ -4,23 +4,35 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "v",
+					"name" : "salida[0]",
 					"strict" : false
 				},
 				{
-					"name" : "w",
+					"name" : "salida[1]",
 					"strict" : false
 				},
 				{
-					"name" : "x",
+					"name" : "salida[2]",
 					"strict" : false
 				},
 				{
-					"name" : "y",
+					"name" : "salida[3]",
 					"strict" : false
 				},
 				{
-					"name" : "z",
+					"name" : "salida[4]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[5]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[6]",
+					"strict" : false
+				},
+				{
+					"name" : "d",
 					"strict" : false
 				},
 				{
@@ -33,10 +45,6 @@
 				},
 				{
 					"name" : "c",
-					"strict" : false
-				},
-				{
-					"name" : "d",
 					"strict" : false
 				}
 			]

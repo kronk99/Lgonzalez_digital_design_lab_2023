@@ -6,7 +6,7 @@ module Interfaz(input logic a, b, c, d, output logic [6:0] salida);
   logic [4:0] resultado;
 
   // Instancia del primer módulo (decodificador)
-  Decodificador miDecodificador (
+  decodificador miDecodificador (
     .a(a),
     .b(b),
     .c(c),
