@@ -1,0 +1,39 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Testbench_Sumador is --no se definen buses de entrada o salidas
+end Testbench_Sumador;
+
+architecture Behavioral of Testbench_Sumador is
+    signal a, b, Cin : STD_LOGIC := '0'; --se declaran las señales que va a recibir
+	 --el sumador, aca lo que esta diciendo es que la simulacion va a iniciar con valores 
+	 --de a , b y el accareo en 0. a lo que entiendo se hace como buena practica
+	 --para que el testbench haga predecible las demas salidas, ya luego
+	 --en la asignacion de estimulos se puede cambiar.
+    signal S, Cout : STD_LOGIC;
+
+    component Sumador --se declara el componente sumador , con sus entradas y salidas
+        port(
+            a, b : in STD_LOGIC;
+            Cin  : in STD_LOGIC;
+            S    : out STD_LOGIC;
+            Cout : out STD_LOGIC
+        );
+    end component;
+
+begin
+    UUT : Sumador port map(a, b, Cin, S, Cout); --esto lo que hace es conectar
+	 --las señales a los peuertos del sumador
+
+    -- Estímulos (input) del testbench
+    process
+    begin
+        a <= '0'; b <= '0'; Cin <= '0';
+        wait for 10 ns;
+
+        a <= '1'; b <= '0'; Cin <= '0';
+
+        wait;
+    end process;
+
+end Behavioral;

@@ -1,0 +1,30 @@
+|sumador
+A[0] => c0.IN0
+A[0] => Resul.IN0
+A[1] => c1.IN0
+A[1] => c1.IN1
+A[1] => Resul.IN1
+A[2] => c2.IN0
+A[2] => c2.IN1
+A[2] => Resul.IN1
+A[3] => Cout.IN0
+A[3] => Cout.IN1
+A[3] => Resul.IN1
+B[0] => c0.IN1
+B[0] => Resul.IN1
+B[1] => c1.IN1
+B[1] => c1.IN1
+B[1] => Resul.IN1
+B[2] => c2.IN1
+B[2] => c2.IN1
+B[2] => Resul.IN1
+B[3] => Cout.IN1
+B[3] => Cout.IN1
+B[3] => Resul.IN1
+Cout << Cout.DB_MAX_OUTPUT_PORT_TYPE
+Resul[0] << Resul.DB_MAX_OUTPUT_PORT_TYPE
+Resul[1] << Resul.DB_MAX_OUTPUT_PORT_TYPE
+Resul[2] << Resul.DB_MAX_OUTPUT_PORT_TYPE
+Resul[3] << Resul.DB_MAX_OUTPUT_PORT_TYPE
+
+
