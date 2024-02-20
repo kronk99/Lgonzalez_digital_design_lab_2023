@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Sun Feb 18 19:13:13 2024
+Analysis & Synthesis Status : Failed - Mon Feb 19 17:18:13 2024
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : Problema2
-Top-level Entity Name : sumador
+Top-level Entity Name : Interfaz
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

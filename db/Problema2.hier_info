@@ -1,4 +1,7 @@
-|sumador
+|Interfaz
+
+
+|Interfaz|sumador:UUT_Sumador
 A[0] => c0.IN0
 A[0] => Resul.IN0
 A[1] => c1.IN0
@@ -21,10 +24,83 @@ B[2] => Resul.IN1
 B[3] => Cout.IN1
 B[3] => Cout.IN1
 B[3] => Resul.IN1
-Cout << Cout.DB_MAX_OUTPUT_PORT_TYPE
-Resul[0] << Resul.DB_MAX_OUTPUT_PORT_TYPE
-Resul[1] << Resul.DB_MAX_OUTPUT_PORT_TYPE
-Resul[2] << Resul.DB_MAX_OUTPUT_PORT_TYPE
-Resul[3] << Resul.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Resul[0] <= Resul.DB_MAX_OUTPUT_PORT_TYPE
+Resul[1] <= Resul.DB_MAX_OUTPUT_PORT_TYPE
+Resul[2] <= Resul.DB_MAX_OUTPUT_PORT_TYPE
+Resul[3] <= Resul.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Interfaz|segmentos:UUT_Segmentos
+Resul[0] => Mux0.IN19
+Resul[0] => Mux1.IN36
+Resul[0] => Mux2.IN36
+Resul[0] => Mux3.IN36
+Resul[0] => Mux4.IN19
+Resul[0] => Mux5.IN19
+Resul[0] => Mux6.IN19
+Resul[0] => Mux7.IN36
+Resul[0] => Mux8.IN36
+Resul[0] => Mux9.IN36
+Resul[0] => Mux10.IN36
+Resul[0] => Mux11.IN36
+Resul[1] => Mux0.IN18
+Resul[1] => Mux1.IN35
+Resul[1] => Mux2.IN35
+Resul[1] => Mux3.IN35
+Resul[1] => Mux4.IN18
+Resul[1] => Mux5.IN18
+Resul[1] => Mux6.IN18
+Resul[1] => Mux7.IN35
+Resul[1] => Mux8.IN35
+Resul[1] => Mux9.IN35
+Resul[1] => Mux10.IN35
+Resul[1] => Mux11.IN35
+Resul[2] => Mux0.IN17
+Resul[2] => Mux1.IN34
+Resul[2] => Mux2.IN34
+Resul[2] => Mux3.IN34
+Resul[2] => Mux4.IN17
+Resul[2] => Mux5.IN17
+Resul[2] => Mux6.IN17
+Resul[2] => Mux7.IN34
+Resul[2] => Mux8.IN34
+Resul[2] => Mux9.IN34
+Resul[2] => Mux10.IN34
+Resul[2] => Mux11.IN34
+Resul[3] => Mux0.IN16
+Resul[3] => Mux1.IN33
+Resul[3] => Mux2.IN33
+Resul[3] => Mux3.IN33
+Resul[3] => Mux4.IN16
+Resul[3] => Mux5.IN16
+Resul[3] => Mux6.IN16
+Resul[3] => Mux7.IN33
+Resul[3] => Mux8.IN33
+Resul[3] => Mux9.IN33
+Resul[3] => Mux10.IN33
+Resul[3] => Mux11.IN33
+Cout => Mux1.IN32
+Cout => Mux2.IN32
+Cout => Mux3.IN32
+Cout => Mux7.IN32
+Cout => Mux8.IN32
+Cout => Mux9.IN32
+Cout => Mux10.IN32
+Cout => Mux11.IN32
+segmento1[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segmento1[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segmento1[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segmento1[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segmento1[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segmento1[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segmento1[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+segmento2[0] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+segmento2[1] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+segmento2[2] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+segmento2[3] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+segmento2[4] <= <GND>
+segmento2[5] <= <GND>
+segmento2[6] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
 
 

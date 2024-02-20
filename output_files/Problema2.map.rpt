@@ -1,5 +1,5 @@
-Analysis & Elaboration report for Problema2
-Sun Feb 18 19:13:13 2024
+Analysis & Synthesis report for Problema2
+Mon Feb 19 17:18:13 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -7,10 +7,12 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Port Connectivity Checks: "segmentos:UUT_Segmentos"
+  6. Elapsed Time Per Partition
+  7. Analysis & Synthesis Messages
 
 
 
@@ -34,47 +36,31 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                 ;
-+-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sun Feb 18 19:13:13 2024          ;
-; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Revision Name                 ; Problema2                                      ;
-; Top-level Entity Name         ; sumador                                        ;
-; Family                        ; Cyclone V                                      ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
-; Total registers               ; N/A until Partition Merge                      ;
-; Total pins                    ; N/A until Partition Merge                      ;
-; Total virtual pins            ; N/A until Partition Merge                      ;
-; Total block memory bits       ; N/A until Partition Merge                      ;
-; Total PLLs                    ; N/A until Partition Merge                      ;
-; Total DLLs                    ; N/A until Partition Merge                      ;
-+-------------------------------+------------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++-----------------------------+------------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Mon Feb 19 17:18:13 2024              ;
+; Quartus Prime Version       ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name               ; Problema2                                      ;
+; Top-level Entity Name       ; Interfaz                                       ;
+; Family                      ; Cyclone V                                      ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
+; Total registers             ; N/A until Partition Merge                      ;
+; Total pins                  ; N/A until Partition Merge                      ;
+; Total virtual pins          ; N/A until Partition Merge                      ;
+; Total block memory bits     ; N/A until Partition Merge                      ;
+; Total PLLs                  ; N/A until Partition Merge                      ;
+; Total DLLs                  ; N/A until Partition Merge                      ;
++-----------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; sumador            ; Problema2          ;
+; Top-level entity name                                                           ; Interfaz           ; Problema2          ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -155,14 +141,49 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "segmentos:UUT_Segmentos"                                                                 ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; segmento1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; segmento2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Sun Feb 18 19:12:59 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema2 -c Problema2 --analysis_and_elaboration
+    Info: Processing started: Mon Feb 19 17:17:59 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema2 -c Problema2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file sumador.vhd
@@ -171,11 +192,29 @@ Info (12021): Found 2 design units, including 1 entities, in source file sumador
 Info (12021): Found 2 design units, including 1 entities, in source file testbench_sumador.vhd
     Info (12022): Found design unit 1: Testbench_Sumador-Behavioral File: C:/Users/Luis/Desktop/sum_paralelo_v1/Testbench_Sumador.vhd Line: 7
     Info (12023): Found entity 1: Testbench_Sumador File: C:/Users/Luis/Desktop/sum_paralelo_v1/Testbench_Sumador.vhd Line: 4
-Info (12127): Elaborating entity "sumador" for the top level hierarchy
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4845 megabytes
-    Info: Processing ended: Sun Feb 18 19:13:13 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:30
+Info (12021): Found 2 design units, including 1 entities, in source file segmentos.vhd
+    Info (12022): Found design unit 1: segmentos-Behavioral File: C:/Users/Luis/Desktop/sum_paralelo_v1/segmentos.vhd Line: 20
+    Info (12023): Found entity 1: segmentos File: C:/Users/Luis/Desktop/sum_paralelo_v1/segmentos.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file interfaz.vhd
+    Info (12022): Found design unit 1: Interfaz-Behavioral File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 8
+    Info (12023): Found entity 1: Interfaz File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 5
+Info (12127): Elaborating entity "Interfaz" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at Interfaz.vhd(9): used implicit default value for signal "A" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 9
+Warning (10541): VHDL Signal Declaration warning at Interfaz.vhd(9): used implicit default value for signal "B" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 9
+Warning (10036): Verilog HDL or VHDL warning at Interfaz.vhd(12): object "segmento1" assigned a value but never read File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 12
+Warning (10036): Verilog HDL or VHDL warning at Interfaz.vhd(12): object "segmento2" assigned a value but never read File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 12
+Info (12128): Elaborating entity "sumador" for hierarchy "sumador:UUT_Sumador" File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 34
+Info (12128): Elaborating entity "segmentos" for hierarchy "segmentos:UUT_Segmentos" File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at segmentos.vhd(26): signal "Cout" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Luis/Desktop/sum_paralelo_v1/segmentos.vhd Line: 26
+Warning (10492): VHDL Process Statement warning at segmentos.vhd(27): signal "Resul" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Luis/Desktop/sum_paralelo_v1/segmentos.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at segmentos.vhd(28): signal "Resul" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Luis/Desktop/sum_paralelo_v1/segmentos.vhd Line: 28
+Warning (10492): VHDL Process Statement warning at segmentos.vhd(29): signal "Resul" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Luis/Desktop/sum_paralelo_v1/segmentos.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at segmentos.vhd(30): signal "Resul" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Luis/Desktop/sum_paralelo_v1/segmentos.vhd Line: 30
+Error (12061): Can't synthesize current design -- Top partition does not contain any logic
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 10 warnings
+    Error: Peak virtual memory: 4856 megabytes
+    Error: Processing ended: Mon Feb 19 17:18:13 2024
+    Error: Elapsed time: 00:00:14
+    Error: Total CPU time (on all processors): 00:00:30
 
 
