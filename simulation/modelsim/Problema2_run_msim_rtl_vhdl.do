@@ -51,6 +51,7 @@ vlib rtl_work
 vmap work rtl_work
 
 vcom -93 -work work {C:/Users/Luis/Desktop/sum_paralelo_v1/sumador.vhd}
+vcom -93 -work work {C:/Users/Luis/Desktop/sum_paralelo_v1/sumador1bit.vhd}
 
 vcom -93 -work work {C:/Users/Luis/Desktop/sum_paralelo_v1/Testbench_Sumador.vhd}
 

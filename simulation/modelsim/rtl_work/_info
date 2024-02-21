@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Luis/Desktop/sum_paralelo_v1/simulation/modelsim
 Esumador
-Z1 w1708299619
+Z1 w1708477612
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 0
@@ -23,9 +23,9 @@ V6Eg`3U3SaN=ff8:ok0QI?0
 !s100 Ek<kgCB;_HFbaAhhI<fCe3
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1708306656
+Z7 !s110 1708478036
 !i10b 1
-Z8 !s108 1708306656.000000
+Z8 !s108 1708478035.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Luis/Desktop/sum_paralelo_v1/sumador.vhd|
 Z10 !s107 C:/Users/Luis/Desktop/sum_paralelo_v1/sumador.vhd|
 !i113 1
@@ -36,10 +36,10 @@ R2
 R3
 DEx4 work 7 sumador 0 22 6Eg`3U3SaN=ff8:ok0QI?0
 !i122 0
-l18
-L15 23
-V7[mkQMoOKN=99[45oICcB2
-!s100 gHA_PYa<1lOCa93VcaMHZ0
+l24
+L15 20
+Vc<VOdADz34mba?;V?L_oR0
+!s100 jV__c6P@_Ae[P[4QaAKCg1
 R6
 31
 R7
@@ -50,14 +50,55 @@ R10
 !i113 1
 R11
 R12
-Etestbench_sumador
-Z13 w1708305179
+Esumador1bit
+Z13 w1708477969
 R2
 R3
 !i122 1
 R0
-Z14 8C:/Users/Luis/Desktop/sum_paralelo_v1/Testbench_Sumador.vhd
-Z15 FC:/Users/Luis/Desktop/sum_paralelo_v1/Testbench_Sumador.vhd
+Z14 8C:/Users/Luis/Desktop/sum_paralelo_v1/sumador1bit.vhd
+Z15 FC:/Users/Luis/Desktop/sum_paralelo_v1/sumador1bit.vhd
+l0
+L3 1
+VcKJ_J?Oa]bAdQBY@3X:OQ3
+!s100 70H<Q8=m]mW;:LneA]Nn?1
+R6
+31
+R7
+!i10b 1
+Z16 !s108 1708478036.000000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Luis/Desktop/sum_paralelo_v1/sumador1bit.vhd|
+Z18 !s107 C:/Users/Luis/Desktop/sum_paralelo_v1/sumador1bit.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 11 sumador1bit 0 22 cKJ_J?Oa]bAdQBY@3X:OQ3
+!i122 1
+l15
+L14 5
+VKBC3c^z2hPB7XcDhe`aI43
+!s100 @R[bSg@_95Qkd9aoAzFk^2
+R6
+31
+R7
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R11
+R12
+Etestbench_sumador
+Z19 w1708305179
+R2
+R3
+!i122 2
+R0
+Z20 8C:/Users/Luis/Desktop/sum_paralelo_v1/Testbench_Sumador.vhd
+Z21 FC:/Users/Luis/Desktop/sum_paralelo_v1/Testbench_Sumador.vhd
 l0
 L4 1
 Va?5YMCM3UDYaR4LU:D_Im0
@@ -66,8 +107,8 @@ R6
 31
 R7
 !i10b 1
-R8
-Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/Luis/Desktop/sum_paralelo_v1/Testbench_Sumador.vhd|
+R16
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/Luis/Desktop/sum_paralelo_v1/Testbench_Sumador.vhd|
 !s107 C:/Users/Luis/Desktop/sum_paralelo_v1/Testbench_Sumador.vhd|
 !i113 1
 R11
@@ -76,7 +117,7 @@ Abehavioral
 R2
 R3
 DEx4 work 17 testbench_sumador 0 22 a?5YMCM3UDYaR4LU:D_Im0
-!i122 1
+!i122 2
 l25
 L7 41
 VGA=l3Z8hF9MclSQnSgXiS1
@@ -85,9 +126,9 @@ R6
 31
 R7
 !i10b 1
-R8
 R16
-Z17 !s107 C:/Users/Luis/Desktop/sum_paralelo_v1/Testbench_Sumador.vhd|
+R22
+Z23 !s107 C:/Users/Luis/Desktop/sum_paralelo_v1/Testbench_Sumador.vhd|
 !i113 1
 R11
 R12

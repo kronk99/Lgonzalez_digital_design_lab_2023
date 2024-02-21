@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Problema2
-Mon Feb 19 17:18:13 2024
+Tue Feb 20 20:45:27 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -10,9 +10,14 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Port Connectivity Checks: "segmentos:UUT_Segmentos"
-  6. Elapsed Time Per Partition
-  7. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "sumador:UUT_Sumador|sumador1bit:UUT_Sumador1"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -36,22 +41,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                 ;
-+-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Feb 19 17:18:13 2024              ;
-; Quartus Prime Version       ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Revision Name               ; Problema2                                      ;
-; Top-level Entity Name       ; Interfaz                                       ;
-; Family                      ; Cyclone V                                      ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
-; Total registers             ; N/A until Partition Merge                      ;
-; Total pins                  ; N/A until Partition Merge                      ;
-; Total virtual pins          ; N/A until Partition Merge                      ;
-; Total block memory bits     ; N/A until Partition Merge                      ;
-; Total PLLs                  ; N/A until Partition Merge                      ;
-; Total DLLs                  ; N/A until Partition Merge                      ;
-+-----------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Feb 20 20:45:27 2024          ;
+; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                   ; Problema2                                      ;
+; Top-level Entity Name           ; Interfaz                                       ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 0                                              ;
+; Total pins                      ; 22                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -157,14 +167,104 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "segmentos:UUT_Segmentos"                                                                 ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; segmento1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; segmento2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                 ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                          ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
+; sumador.vhd                      ; yes             ; User VHDL File  ; C:/Users/Luis/Desktop/sum_paralelo_v1/sumador.vhd     ;         ;
+; segmentos.vhd                    ; yes             ; User VHDL File  ; C:/Users/Luis/Desktop/sum_paralelo_v1/segmentos.vhd   ;         ;
+; Interfaz.vhd                     ; yes             ; User VHDL File  ; C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd    ;         ;
+; sumador1bit.vhd                  ; yes             ; User VHDL File  ; C:/Users/Luis/Desktop/sum_paralelo_v1/sumador1bit.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                      ;
++---------------------------------------------+----------------------------------------------------+
+; Resource                                    ; Usage                                              ;
++---------------------------------------------+----------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 10                                                 ;
+;                                             ;                                                    ;
+; Combinational ALUT usage for logic          ; 15                                                 ;
+;     -- 7 input functions                    ; 0                                                  ;
+;     -- 6 input functions                    ; 5                                                  ;
+;     -- 5 input functions                    ; 2                                                  ;
+;     -- 4 input functions                    ; 6                                                  ;
+;     -- <=3 input functions                  ; 2                                                  ;
+;                                             ;                                                    ;
+; Dedicated logic registers                   ; 0                                                  ;
+;                                             ;                                                    ;
+; I/O pins                                    ; 22                                                 ;
+;                                             ;                                                    ;
+; Total DSP Blocks                            ; 0                                                  ;
+;                                             ;                                                    ;
+; Maximum fan-out node                        ; sumador:UUT_Sumador|sumador1bit:UUT_Sumador3|Resul ;
+; Maximum fan-out                             ; 9                                                  ;
+; Total fan-out                               ; 103                                                ;
+; Average fan-out                             ; 1.75                                               ;
++---------------------------------------------+----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                             ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Entity Name ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+-------------+--------------+
+; |Interfaz                        ; 15 (0)              ; 0 (0)                     ; 0                 ; 0          ; 22   ; 0            ; |Interfaz                                              ; Interfaz    ; work         ;
+;    |segmentos:UUT_Segmentos|     ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Interfaz|segmentos:UUT_Segmentos                      ; segmentos   ; work         ;
+;    |sumador:UUT_Sumador|         ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Interfaz|sumador:UUT_Sumador                          ; sumador     ; work         ;
+;       |sumador1bit:UUT_Sumador1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Interfaz|sumador:UUT_Sumador|sumador1bit:UUT_Sumador1 ; sumador1bit ; work         ;
+;       |sumador1bit:UUT_Sumador2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Interfaz|sumador:UUT_Sumador|sumador1bit:UUT_Sumador2 ; sumador1bit ; work         ;
+;       |sumador1bit:UUT_Sumador3| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Interfaz|sumador:UUT_Sumador|sumador1bit:UUT_Sumador3 ; sumador1bit ; work         ;
+;       |sumador1bit:UUT_Sumador4| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Interfaz|sumador:UUT_Sumador|sumador1bit:UUT_Sumador4 ; sumador1bit ; work         ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "sumador:UUT_Sumador|sumador1bit:UUT_Sumador1" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 18                          ;
+;     normal            ; 18                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 6                           ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 5                           ;
+; boundary_port         ; 22                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 3.12                        ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -182,7 +282,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Mon Feb 19 17:17:59 2024
+    Info: Processing started: Tue Feb 20 20:45:14 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema2 -c Problema2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -196,25 +296,35 @@ Info (12021): Found 2 design units, including 1 entities, in source file segment
     Info (12022): Found design unit 1: segmentos-Behavioral File: C:/Users/Luis/Desktop/sum_paralelo_v1/segmentos.vhd Line: 20
     Info (12023): Found entity 1: segmentos File: C:/Users/Luis/Desktop/sum_paralelo_v1/segmentos.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file interfaz.vhd
-    Info (12022): Found design unit 1: Interfaz-Behavioral File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 8
+    Info (12022): Found design unit 1: Interfaz-Behavioral File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 18
     Info (12023): Found entity 1: Interfaz File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file sumador1bit.vhd
+    Info (12022): Found design unit 1: sumador1bit-Behavioral File: C:/Users/Luis/Desktop/sum_paralelo_v1/sumador1bit.vhd Line: 14
+    Info (12023): Found entity 1: sumador1bit File: C:/Users/Luis/Desktop/sum_paralelo_v1/sumador1bit.vhd Line: 3
 Info (12127): Elaborating entity "Interfaz" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Interfaz.vhd(9): used implicit default value for signal "A" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 9
-Warning (10541): VHDL Signal Declaration warning at Interfaz.vhd(9): used implicit default value for signal "B" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 9
-Warning (10036): Verilog HDL or VHDL warning at Interfaz.vhd(12): object "segmento1" assigned a value but never read File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 12
-Warning (10036): Verilog HDL or VHDL warning at Interfaz.vhd(12): object "segmento2" assigned a value but never read File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 12
-Info (12128): Elaborating entity "sumador" for hierarchy "sumador:UUT_Sumador" File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 34
-Info (12128): Elaborating entity "segmentos" for hierarchy "segmentos:UUT_Segmentos" File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 37
+Info (12128): Elaborating entity "sumador" for hierarchy "sumador:UUT_Sumador" File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 44
+Warning (10540): VHDL Signal Declaration warning at sumador.vhd(16): used explicit default value for signal "C0" because signal was never assigned a value File: C:/Users/Luis/Desktop/sum_paralelo_v1/sumador.vhd Line: 16
+Info (12128): Elaborating entity "sumador1bit" for hierarchy "sumador:UUT_Sumador|sumador1bit:UUT_Sumador1" File: C:/Users/Luis/Desktop/sum_paralelo_v1/sumador.vhd Line: 26
+Info (12128): Elaborating entity "segmentos" for hierarchy "segmentos:UUT_Segmentos" File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 47
 Warning (10492): VHDL Process Statement warning at segmentos.vhd(26): signal "Cout" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Luis/Desktop/sum_paralelo_v1/segmentos.vhd Line: 26
 Warning (10492): VHDL Process Statement warning at segmentos.vhd(27): signal "Resul" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Luis/Desktop/sum_paralelo_v1/segmentos.vhd Line: 27
 Warning (10492): VHDL Process Statement warning at segmentos.vhd(28): signal "Resul" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Luis/Desktop/sum_paralelo_v1/segmentos.vhd Line: 28
 Warning (10492): VHDL Process Statement warning at segmentos.vhd(29): signal "Resul" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Luis/Desktop/sum_paralelo_v1/segmentos.vhd Line: 29
 Warning (10492): VHDL Process Statement warning at segmentos.vhd(30): signal "Resul" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Luis/Desktop/sum_paralelo_v1/segmentos.vhd Line: 30
-Error (12061): Can't synthesize current design -- Top partition does not contain any logic
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 10 warnings
-    Error: Peak virtual memory: 4856 megabytes
-    Error: Processing ended: Mon Feb 19 17:18:13 2024
-    Error: Elapsed time: 00:00:14
-    Error: Total CPU time (on all processors): 00:00:30
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "segmento2[4]" is stuck at GND File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 14
+    Warning (13410): Pin "segmento2[5]" is stuck at GND File: C:/Users/Luis/Desktop/sum_paralelo_v1/Interfaz.vhd Line: 14
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 37 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 15 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Tue Feb 20 20:45:27 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:29
 
 

@@ -1,0 +1,19 @@
+library IEEE;
+	use ieee.std_logic_1164.all;
+entity sumador1bit is
+	port
+	(
+		--Puertos de entrada
+		A,B	: in std_logic --entrada es un num de 4 bits
+		
+		--Puertos de salida
+		Cout  : out std_logic; --acarreo de la ultima suma
+		Resul : out std_logic --resultados S
+	);
+end sumador1bit;
+architecture Behavioral of sumador is
+begin 
+	Cout <= A and B; --Con este se encuentra el Cout (Acarreo )  de los bits
+	--menos significativos 
+	Resul <= A xor B;
+end Behavioral;
