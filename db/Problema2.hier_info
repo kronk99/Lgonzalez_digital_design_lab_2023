@@ -1,0 +1,170 @@
+|Interfaz
+A[0] => sumador:UUT_Sumador.A[0]
+A[1] => sumador:UUT_Sumador.A[1]
+A[2] => sumador:UUT_Sumador.A[2]
+A[3] => sumador:UUT_Sumador.A[3]
+B[0] => sumador:UUT_Sumador.B[0]
+B[1] => sumador:UUT_Sumador.B[1]
+B[2] => sumador:UUT_Sumador.B[2]
+B[3] => sumador:UUT_Sumador.B[3]
+segmento1[0] << segmentos:UUT_Segmentos.segmento1[0]
+segmento1[1] << segmentos:UUT_Segmentos.segmento1[1]
+segmento1[2] << segmentos:UUT_Segmentos.segmento1[2]
+segmento1[3] << segmentos:UUT_Segmentos.segmento1[3]
+segmento1[4] << segmentos:UUT_Segmentos.segmento1[4]
+segmento1[5] << segmentos:UUT_Segmentos.segmento1[5]
+segmento1[6] << segmentos:UUT_Segmentos.segmento1[6]
+segmento2[0] << segmentos:UUT_Segmentos.segmento2[0]
+segmento2[1] << segmentos:UUT_Segmentos.segmento2[1]
+segmento2[2] << segmentos:UUT_Segmentos.segmento2[2]
+segmento2[3] << segmentos:UUT_Segmentos.segmento2[3]
+segmento2[4] << segmentos:UUT_Segmentos.segmento2[4]
+segmento2[5] << segmentos:UUT_Segmentos.segmento2[5]
+segmento2[6] << segmentos:UUT_Segmentos.segmento2[6]
+
+
+|Interfaz|sumador:UUT_Sumador
+A[0] => sumador1bit:UUT_Sumador1.A
+A[1] => sumador1bit:UUT_Sumador2.A
+A[2] => sumador1bit:UUT_Sumador3.A
+A[3] => sumador1bit:UUT_Sumador4.A
+B[0] => sumador1bit:UUT_Sumador1.B
+B[1] => sumador1bit:UUT_Sumador2.B
+B[2] => sumador1bit:UUT_Sumador3.B
+B[3] => sumador1bit:UUT_Sumador4.B
+Cout <= sumador1bit:UUT_Sumador4.Cout
+Resul[0] <= sumador1bit:UUT_Sumador1.Resul
+Resul[1] <= sumador1bit:UUT_Sumador2.Resul
+Resul[2] <= sumador1bit:UUT_Sumador3.Resul
+Resul[3] <= sumador1bit:UUT_Sumador4.Resul
+
+
+|Interfaz|sumador:UUT_Sumador|sumador1bit:UUT_Sumador1
+A => Cout.IN0
+A => Cout.IN0
+A => Resul.IN0
+B => Cout.IN1
+B => Cout.IN0
+B => Resul.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => Resul.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Resul <= Resul.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Interfaz|sumador:UUT_Sumador|sumador1bit:UUT_Sumador2
+A => Cout.IN0
+A => Cout.IN0
+A => Resul.IN0
+B => Cout.IN1
+B => Cout.IN0
+B => Resul.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => Resul.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Resul <= Resul.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Interfaz|sumador:UUT_Sumador|sumador1bit:UUT_Sumador3
+A => Cout.IN0
+A => Cout.IN0
+A => Resul.IN0
+B => Cout.IN1
+B => Cout.IN0
+B => Resul.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => Resul.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Resul <= Resul.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Interfaz|sumador:UUT_Sumador|sumador1bit:UUT_Sumador4
+A => Cout.IN0
+A => Cout.IN0
+A => Resul.IN0
+B => Cout.IN1
+B => Cout.IN0
+B => Resul.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => Resul.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+Resul <= Resul.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Interfaz|segmentos:UUT_Segmentos
+Resul[0] => Mux0.IN19
+Resul[0] => Mux1.IN36
+Resul[0] => Mux2.IN36
+Resul[0] => Mux3.IN36
+Resul[0] => Mux4.IN19
+Resul[0] => Mux5.IN19
+Resul[0] => Mux6.IN19
+Resul[0] => Mux7.IN36
+Resul[0] => Mux8.IN36
+Resul[0] => Mux9.IN36
+Resul[0] => Mux10.IN36
+Resul[0] => Mux11.IN36
+Resul[1] => Mux0.IN18
+Resul[1] => Mux1.IN35
+Resul[1] => Mux2.IN35
+Resul[1] => Mux3.IN35
+Resul[1] => Mux4.IN18
+Resul[1] => Mux5.IN18
+Resul[1] => Mux6.IN18
+Resul[1] => Mux7.IN35
+Resul[1] => Mux8.IN35
+Resul[1] => Mux9.IN35
+Resul[1] => Mux10.IN35
+Resul[1] => Mux11.IN35
+Resul[2] => Mux0.IN17
+Resul[2] => Mux1.IN34
+Resul[2] => Mux2.IN34
+Resul[2] => Mux3.IN34
+Resul[2] => Mux4.IN17
+Resul[2] => Mux5.IN17
+Resul[2] => Mux6.IN17
+Resul[2] => Mux7.IN34
+Resul[2] => Mux8.IN34
+Resul[2] => Mux9.IN34
+Resul[2] => Mux10.IN34
+Resul[2] => Mux11.IN34
+Resul[3] => Mux0.IN16
+Resul[3] => Mux1.IN33
+Resul[3] => Mux2.IN33
+Resul[3] => Mux3.IN33
+Resul[3] => Mux4.IN16
+Resul[3] => Mux5.IN16
+Resul[3] => Mux6.IN16
+Resul[3] => Mux7.IN33
+Resul[3] => Mux8.IN33
+Resul[3] => Mux9.IN33
+Resul[3] => Mux10.IN33
+Resul[3] => Mux11.IN33
+Cout => Mux1.IN32
+Cout => Mux2.IN32
+Cout => Mux3.IN32
+Cout => Mux7.IN32
+Cout => Mux8.IN32
+Cout => Mux9.IN32
+Cout => Mux10.IN32
+Cout => Mux11.IN32
+segmento1[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segmento1[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segmento1[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segmento1[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segmento1[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segmento1[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segmento1[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+segmento2[0] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+segmento2[1] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+segmento2[2] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+segmento2[3] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+segmento2[4] <= <GND>
+segmento2[5] <= <GND>
+segmento2[6] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+
+
