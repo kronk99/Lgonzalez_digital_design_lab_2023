@@ -1,0 +1,63 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Luis/Desktop/Problema1/simulation/modelsim
+vdecodificador
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1707940594
+!i10b 1
+!s100 >ihKQd6kg2X0zB7U5;zih0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IP_NK[mkRMBVJJgV;ZdUZE0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1707628341
+8C:/Users/Luis/Desktop/Problema1/decodificador.sv
+FC:/Users/Luis/Desktop/Problema1/decodificador.sv
+!i122 0
+L0 1 8
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1707940593.000000
+!s107 C:/Users/Luis/Desktop/Problema1/decodificador.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Luis/Desktop/Problema1|C:/Users/Luis/Desktop/Problema1/decodificador.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/Luis/Desktop/Problema1
+Z8 tCvgOpt 0
+vdecodificador_tb
+R1
+R2
+!i10b 1
+!s100 8QPA2b;AO;BLGbcLEl>NG0
+R3
+I4:9T:@8fOzbzFND8=9R=A2
+R4
+S1
+R0
+w1707940524
+8C:/Users/Luis/Desktop/Problema1/decodificador_tb.sv
+FC:/Users/Luis/Desktop/Problema1/decodificador_tb.sv
+!i122 1
+L0 1 53
+R5
+r1
+!s85 0
+31
+!s108 1707940594.000000
+!s107 C:/Users/Luis/Desktop/Problema1/decodificador_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Luis/Desktop/Problema1|C:/Users/Luis/Desktop/Problema1/decodificador_tb.sv|
+!i113 1
+R6
+R7
+R8

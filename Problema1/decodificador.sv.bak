@@ -1,0 +1,8 @@
+module decodificador(input logic a, b, c, d, output logic v, w, x, y, z);
+assing v = (a & b ) | (a & c);
+assing w = a & b & c ;
+assing x = (a & b ) | (b & c);
+assing y = (a & c) | (a & b & c);
+assing z = d;
+
+endmodule
