@@ -1,0 +1,27 @@
+module testbench;
+//al ser parametro debe de declararse el parametro 
+parameter N=4;
+//declaraciones de registros para simular el clock
+reg clk;
+reg rst;
+
+contador #(N) contable( //instanciacion del modulo
+    .clk(clk),//conexion de los registros con las señales, como crear buses
+    .rst(rst)
+  );
+initial begin
+	clk =0 ; //el clock se inicializa en 0 , recuerde, las entradas de clk son 0 o 1 ,
+	//al igual que el reset
+forever #5 clk = ~clk; //forever es un tipo de while, esto esta diciendo que crea 
+//un bucle que cambia el valor de clock cada 5 unidades, estimo que a la negacion.
+  end
+  // Estímulos para el testbench
+  initial begin
+    rst = 1; // Inicializar con el reset activado
+    #10 rst = 0; // Desactivar el reset después de 10 unidades de tiempo
+    // Verificación con assert
+    assert(contable.q === 0) else $fatal("Error: El contador no se reinició correctamente.");
+  end
+  //dudas a resolver , porqué el clock debe de cambiar, luego , por que el reset inicia en 1
+  //no debe de iniciar en 0 y luego volverse 1?
+endmodule

@@ -1,8 +1,11 @@
-module contador #(parameter N = 4) //parametro cambiable
-  (input logic clk, // Entrada del reloj
+module contador #(parameter N = 4 ,parameter F =15) //parametro cambiable
+//el F representa el numero en el cual se hará el reset, por default son 4 bits,
+//entonces por default se reinicia en counter =15
+  (input logic clk, // Entrada del reloj //clock esta al revez
    input logic rst, // Entrada de reset 
    output logic [N-1:0] q); // Salida del contador de N bits
-
+//HACE FALTA HACERLE UN PARAMETRO ADICIONAL , QUE DIGA HASTA DONDE ES EL RESET
+//Y QUE SI EL COUNTER ES IGUAL AL MAXIMO NUMERO, ENTONCES QUE SERESETEE
   logic [N-1:0] count, next_count; //se declaran señales internas , el count y el 
   //next count
 
@@ -14,11 +17,15 @@ module contador #(parameter N = 4) //parametro cambiable
   el always es un tipo de ciclo while infinito, entonces luego de pasar por el flip
   flop se reinicia, verifica cuando es 0 y cuando es 1
   */
-  always_ff @(posedge clk or posedge rst)
+  //hacerlo negedge para la fpga
+  always_ff @(posedge clk or posedge rst) //el reset debe de hacerse con un switch
     if (rst)
       count <= 0; // Reset asincrónico
     else
-      count <= next_count; // Incremento del contador
+		if(count != F)
+		count <= next_count; // Incremento del contador
+		else
+			count <= 0; //reset asincrono cuando llega a ser igual al numero
 
   // Lógica para incrementar el contador
   /*otro ciclo while, si el reset esta en high, el siguiente contador es 0
@@ -26,7 +33,7 @@ module contador #(parameter N = 4) //parametro cambiable
   always_ff @(posedge clk)
     if (rst)
       next_count <= 0; // Reset asincrónico
-    else
+    else //preguntar si el count llego al valor establecido , si lo es se reinicia
       next_count <= count + 1; // Incremento del contador
 
   // Asignación de la salida del contador
