@@ -1,5 +1,5 @@
-Analysis & Elaboration report for Problema3
-Wed Feb 21 00:25:17 2024
+Analysis & Synthesis report for Problema3
+Wed Feb 21 12:35:50 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -7,11 +7,20 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |contador
-  5. Analysis & Elaboration Settings
-  6. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |contadorFPGA
+ 12. Port Connectivity Checks: "Segmentos:misegmentos"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -35,58 +44,36 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                 ;
-+-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Feb 21 00:25:17 2024          ;
-; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Revision Name                 ; Problema3                                      ;
-; Top-level Entity Name         ; contador                                       ;
-; Family                        ; Cyclone V                                      ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
-; Total registers               ; N/A until Partition Merge                      ;
-; Total pins                    ; N/A until Partition Merge                      ;
-; Total virtual pins            ; N/A until Partition Merge                      ;
-; Total block memory bits       ; N/A until Partition Merge                      ;
-; Total PLLs                    ; N/A until Partition Merge                      ;
-; Total DLLs                    ; N/A until Partition Merge                      ;
-+-------------------------------+------------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |contador ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; N              ; 4     ; Signed Integer                                  ;
-; F              ; 15    ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Feb 21 12:35:50 2024          ;
+; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                   ; Problema3                                      ;
+; Top-level Entity Name           ; contadorFPGA                                   ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 17                                             ;
+; Total pins                      ; 25                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; contador           ; Problema3          ;
+; Top-level entity name                                                           ; contadorFPGA       ; Problema3          ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -167,26 +154,274 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                    ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
+; contadorFPGA.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv ;         ;
+; Segmentos.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Luis/Desktop/Problema3/Segmentos.sv    ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimate of Logic utilization (ALMs needed) ; 18       ;
+;                                             ;          ;
+; Combinational ALUT usage for logic          ; 23       ;
+;     -- 7 input functions                    ; 1        ;
+;     -- 6 input functions                    ; 10       ;
+;     -- 5 input functions                    ; 4        ;
+;     -- 4 input functions                    ; 5        ;
+;     -- <=3 input functions                  ; 3        ;
+;                                             ;          ;
+; Dedicated logic registers                   ; 17       ;
+;                                             ;          ;
+; I/O pins                                    ; 25       ;
+;                                             ;          ;
+; Total DSP Blocks                            ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; count[0] ;
+; Maximum fan-out                             ; 18       ;
+; Total fan-out                               ; 197      ;
+; Average fan-out                             ; 2.19     ;
++---------------------------------------------+----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
+; |contadorFPGA              ; 23 (23)             ; 17 (17)                   ; 0                 ; 0          ; 25   ; 0            ; |contadorFPGA       ; contadorFPGA ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 17    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 11    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; reset_active_ff                        ; 1       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |contadorFPGA|next_count[3] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |contadorFPGA|next_count[0] ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |contadorFPGA|count[0]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |contadorFPGA ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; N              ; 6     ; Signed Integer                                      ;
+; F              ; 63    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Segmentos:misegmentos"                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; bcd  ; Input ; Warning  ; Input port expression (6 bits) is wider than the input port (1 bits) it drives.  The 5 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 17                          ;
+;     CLR               ; 9                           ;
+;     ENA CLR           ; 2                           ;
+;     plain             ; 6                           ;
+; arriav_lcell_comb     ; 26                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 25                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 5                           ;
+;         5 data inputs ; 4                           ;
+;         6 data inputs ; 10                          ;
+; boundary_port         ; 25                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.74                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Wed Feb 21 00:25:02 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema3 -c Problema3 --analysis_and_elaboration
+    Info: Processing started: Wed Feb 21 12:35:38 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema3 -c Problema3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file contador.sv
     Info (12023): Found entity 1: contador File: C:/Users/Luis/Desktop/Problema3/contador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
     Info (12023): Found entity 1: testbench File: C:/Users/Luis/Desktop/Problema3/testbench.sv Line: 1
-Info (12127): Elaborating entity "contador" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at contador.sv(37): truncated value with size 32 to match size of target (4) File: C:/Users/Luis/Desktop/Problema3/contador.sv Line: 37
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4777 megabytes
-    Info: Processing ended: Wed Feb 21 00:25:17 2024
-    Info: Elapsed time: 00:00:15
+Info (12021): Found 1 design units, including 1 entities, in source file testbench2.sv
+    Info (12023): Found entity 1: testbench2 File: C:/Users/Luis/Desktop/Problema3/testbench2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testbench3.sv
+    Info (12023): Found entity 1: testbench3 File: C:/Users/Luis/Desktop/Problema3/testbench3.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file contadorfpga.sv
+    Info (12023): Found entity 1: contadorFPGA File: C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file segmentos.sv
+    Info (12023): Found entity 1: Segmentos File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 1
+Info (12127): Elaborating entity "contadorFPGA" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at contadorFPGA.sv(25): truncated value with size 32 to match size of target (6) File: C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at contadorFPGA.sv(28): truncated value with size 32 to match size of target (3) File: C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at contadorFPGA.sv(51): truncated value with size 32 to match size of target (6) File: C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv Line: 51
+Info (12128): Elaborating entity "Segmentos" for hierarchy "Segmentos:misegmentos" File: C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv Line: 63
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(7): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 7
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(8): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 8
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(9): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 9
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(10): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 10
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(11): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 11
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(12): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 12
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(13): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 13
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(14): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 14
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(15): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 15
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(16): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 16
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(17): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 17
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(18): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 18
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(19): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 19
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(20): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 20
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(21): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 21
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(22): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 22
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(23): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 23
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(24): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 24
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(25): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 25
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(26): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 26
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(27): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 27
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(28): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 28
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(29): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 29
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(30): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 30
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(31): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 31
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(32): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 32
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(33): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 33
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(34): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 34
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(35): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 35
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(36): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 36
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(37): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 37
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(38): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 38
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(39): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 39
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(40): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 40
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(41): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 41
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(42): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 42
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(43): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 43
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(44): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 44
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(45): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 45
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(46): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 46
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(47): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 47
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(48): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 48
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(49): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 49
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(50): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 50
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(51): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 51
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(52): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 52
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(53): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 53
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(54): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 54
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(55): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 55
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(56): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 56
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(57): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 57
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(58): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 58
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(59): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 59
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(60): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 60
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(61): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 61
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(62): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 62
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(63): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 63
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(64): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 64
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(65): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 65
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(66): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 66
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(67): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 67
+Warning (10199): Verilog HDL Case Statement warning at Segmentos.sv(68): case item expression never matches the case expression File: C:/Users/Luis/Desktop/Problema3/Segmentos.sv Line: 68
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "segmentos[0]" is stuck at VCC File: C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv Line: 7
+    Warning (13410): Pin "segmentos[4]" is stuck at GND File: C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv Line: 7
+    Warning (13410): Pin "segmentos[5]" is stuck at GND File: C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv Line: 7
+    Warning (13410): Pin "segmentos2[0]" is stuck at GND File: C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv Line: 8
+    Warning (13410): Pin "segmentos2[1]" is stuck at GND File: C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv Line: 8
+    Warning (13410): Pin "segmentos2[2]" is stuck at GND File: C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv Line: 8
+    Warning (13410): Pin "segmentos2[3]" is stuck at GND File: C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv Line: 8
+    Warning (13410): Pin "segmentos2[4]" is stuck at GND File: C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv Line: 8
+    Warning (13410): Pin "segmentos2[5]" is stuck at GND File: C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv Line: 8
+    Warning (13410): Pin "segmentos2[6]" is stuck at GND File: C:/Users/Luis/Desktop/Problema3/contadorFPGA.sv Line: 8
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 49 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 21 output pins
+    Info (21061): Implemented 24 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 78 warnings
+    Info: Peak virtual memory: 4838 megabytes
+    Info: Processing ended: Wed Feb 21 12:35:50 2024
+    Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:26
 
 
